@@ -21,7 +21,7 @@ public class IMC {
     }else if(imc < 30){  
      JOptionPane.showMessageDialog(null,"Acima do peso ...");  
     }else{  
-     JOptionPane.showMessageDialog(null,"Voce esta enorme...");  
+     JOptionPane.showMessageDialog(null,"Voce vai Morrer muito cedo se não ir se cuidar...");  
 }  
 System.exit(0);  
 }  	   
