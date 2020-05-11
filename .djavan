@@ -19,7 +19,7 @@ public class IMC {
 	} else if(imc < 25 ) {  
      JOptionPane.showMessageDialog(null,"Esta no peso normal !");  
     }else if(imc < 30){  
-     JOptionPane.showMessageDialog(null,"Acima do peso ...");  
+     JOptionPane.showMessageDialog(null,"Ta gordo carai ...");  
     }else{  
      JOptionPane.showMessageDialog(null,"Voce vai Morrer muito cedo se não ir se cuidar...");  
 }  
