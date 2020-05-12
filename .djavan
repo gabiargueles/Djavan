@@ -1,7 +1,11 @@
-import javax.swing.JOptionPane;
+﻿import javax.swing.JOptionPane;
 
-public class IMC {
- public static void main(String[] args) {  
+public class main {
+        public static void main(String[] args) {
+            calc(3);
+        }
+
+        public static int calc(int y){
   double peso =0 ;  
   double altura = 0 ;  
   String xpeso, xaltura;  
@@ -22,7 +26,13 @@ public class IMC {
      JOptionPane.showMessageDialog(null,"Ta gordo carai ...");  
     }else{  
      JOptionPane.showMessageDialog(null,"Voce vai Morrer muito cedo se não ir se cuidar...");  
-}  
-System.exit(0);  
-}  	   
-} 
+    }
+            if(y==0){
+                JOptionPane.showMessageDialog(null,"acabaram os seus usos");
+                return 0;
+            }
+            JOptionPane.showMessageDialog(null,y+" usos restantes");
+            y=y-1;
+            return calc(y);
+        }
+}
