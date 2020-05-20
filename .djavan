@@ -6,32 +6,42 @@ public class main {
         }
 
         public static int calc(int y){
-  double peso =0 ;  
-  double altura = 0 ;  
-  String xpeso, xaltura;  
+  double peso=0,altura=0,imc ;   
+  String nome;  
+  Scanner ler = new Scanner(System.in);
+  ArrayList historico = new ArrayList();
 
-  xaltura = JOptionPane.showInputDialog("Qual sua altura ?");  
-  xpeso = JOptionPane.showInputDialog("Qual sua peso ?");  
-  altura = Double.parseDouble(xaltura);  
-  peso = Double.parseDouble(xpeso);  
-  double imc = peso / (altura * altura ) ;  
+  System.out.printf("Digite o seu nome:\n");
+  nome = ler.next();
+  
+  System.out.printf("Digite sua altura:\n");
+  altura= ler.nextDouble();
 
-  JOptionPane.showMessageDialog(null, "Seu IMC é "+ imc);  
+  System.out.printf("Digite seu peso:\n");
+  peso = ler.nextDouble();
+
+  imc = peso / (altura * altura ) ;  
+
+  System.out.println("Seu IMC é "+ imc);  
 
 	if (imc < 18.5){  
-     JOptionPane.showMessageDialog(null,"Voce esta abaixo do peso ...");  
+     System.out.println("Voce esta abaixo do peso ...");  
 	} else if(imc < 25 ) {  
-     JOptionPane.showMessageDialog(null,"Esta no peso normal !");  
+     System.out.println("Esta no peso normal !");   
     }else if(imc < 30){  
-     JOptionPane.showMessageDialog(null,"Ta gordo carai ...");  
+     System.out.println("Você está gordo ...");
     }else{  
-     JOptionPane.showMessageDialog(null,"Voce vai Morrer muito cedo se não ir se cuidar...");  
+     System.out.println("Voce vai Morrer muito cedo se não ir se cuidar...");  
     }
+  historico.add("Nome: "+nome+" - "+"Altura: "+altura+" - "+"Peso: "+peso+" - "+"IMC: "+imc);
+  for(Object mostra : historico){
+      System.out.println(mostra);
+  }
             if(y==0){
-                JOptionPane.showMessageDialog(null,"acabaram os seus usos");
+                System.out.println("acabaram os seus usos");
                 return 0;
             }
-            JOptionPane.showMessageDialog(null,y+" usos restantes");
+            System.out.println(y+" usos restantes");
             y=y-1;
             return calc(y);
         }
